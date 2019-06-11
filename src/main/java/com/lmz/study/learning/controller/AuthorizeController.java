@@ -24,8 +24,9 @@ public class AuthorizeController {
     private String clientId;
     @Value("${github.client.secret}")
     private String clientSecret;
-    @Value("${github.redirect.uri")
+    @Value("${github.redirect.uri}")
     private String redirectUri;
+
 
     @GetMapping("/callback")
     public String callback(@RequestParam(name = "code")String code,@RequestParam(name = "state")String state){
